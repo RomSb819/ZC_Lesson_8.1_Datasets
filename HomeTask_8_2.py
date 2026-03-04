@@ -41,13 +41,16 @@ data = {
 }
 df = pd.DataFrame(data)
 print(df.head())
-print(f"Математика средний оценка - {df['math_grades'].mean()}, медианная оценка {df['math_grades'].median()}, отклонение стд {df['math_grades'].std()}")
-print(f"История средний оценка - {df['history_grades'].mean()}, медианная оценка {df['history_grades'].median()}, отклонение стд {df['history_grades'].std()}")
-print(f"Иностранный язык средний оценка - {df['for_lang_grades'].mean()}, медианная оценка {df['for_lang_grades'].median()}, отклонение стд {df['for_lang_grades'].std()}")
-print(f"Геометрия средний оценка - {df['geometry_grades'].mean()}, медианная оценка {df['geometry_grades'].median()}, отклонение стд {df['geometry_grades'].std()}")
-print(f"Xимия средний оценка - {df['chemistry_grades'].mean()}, медианная оценка {df['chemistry_grades'].median()}, отклонение стд {df['chemistry_grades'].std()}")
+print(f"Математика средний оценка - {df['math_grades'].mean()}, медианная оценка {df['math_grades'].median()}, отклонение отклонение {df['math_grades'].std()}")
+print(f"История средний оценка - {df['history_grades'].mean()}, медианная оценка {df['history_grades'].median()}, отклонение отклонение {df['history_grades'].std()}")
+print(f"Иностранный язык средний оценка - {df['for_lang_grades'].mean()}, медианная оценка {df['for_lang_grades'].median()}, отклонение отклонение {df['for_lang_grades'].std()}")
+print(f"Геометрия средний оценка - {df['geometry_grades'].mean()}, медианная оценка {df['geometry_grades'].median()}, отклонение отклонение {df['geometry_grades'].std()}")
+print(f"Xимия средний оценка - {df['chemistry_grades'].mean()}, медианная оценка {df['chemistry_grades'].median()}, отклонение отклонение {df['chemistry_grades'].std()}")
 
 Q1_math = df['math_grades'].quantile(0.25)
 Q3_math = df['math_grades'].quantile(0.75)
 
-print(f"Q1 и Q3 для оценок по математике - {Q1_math}, {Q3_math}")
+IQR = Q3_math - Q1_math
+
+
+print(f"Q1 и Q3 для оценок по математике - {Q1_math}, {Q3_math}, размах IQR = {IQR}")
