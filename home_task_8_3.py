@@ -14,25 +14,25 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# data = np.random.normal(0, 1, 1000)
-# plt.hist(data)
-#
-# plt.xlabel("ось Х")
-# plt.ylabel("ось Y")
-#
-# plt.show()
-#
-# print(data)
+data = np.random.normal(0, 1, 1000)
+plt.hist(data)
 
-
-# 2. Построй диаграмму рассеяния для двух наборов случайных данных, сгенерированных с помощью функции `numpy.random.rand`
-
-data2 = np.random.random((2,200))
-
-plt.scatter(data2[0], data2[1])
 plt.xlabel("ось Х")
 plt.ylabel("ось Y")
 
 plt.show()
 
-print(data2)
+print(data)
+
+
+# 2. Построй диаграмму рассеяния для двух наборов случайных данных, сгенерированных с помощью функции `numpy.random.rand`
+
+# data2 = np.random.random((2,200))
+#
+# plt.scatter(data2[0], data2[1])
+# plt.xlabel("ось Х")
+# plt.ylabel("ось Y")
+#
+# plt.show()
+#
+# print(data2)
